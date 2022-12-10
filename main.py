@@ -36,7 +36,7 @@ class Player(pygame.sprite.Sprite):
         # Find a new position for the player
         self.rect.x += self.change_x
 
-        # Did this update cause us to hit a wall?
+        # check if wall was hit
         block_hit_list = pygame.sprite.spritecollide(self, self.walls, False)
         for block in block_hit_list:
             # If we are moving right, set our right side to the left side of
